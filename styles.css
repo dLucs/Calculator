@@ -1,68 +1,82 @@
 html {
-    box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
-    font-weight: normal;
-    min-height: 100vh;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  min-height: 100vh;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(0deg, #6f2dbd, #b298dc, #b9faf8 );
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(0deg, #6f2dbd, #b298dc, #b9faf8);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .calculator-grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 125px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 125px);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+  margin: auto;
+  width: 500px;
+}
+
+.calculator-grid .calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 125px);
+  grid-template-rows: minmax(120px, auto) repeat(4, 125px);
 }
 
 .calculator-grid div:first-child {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .calculator-grid .left {
-    border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .calculator-grid #right {
-    border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .calculator-grid button {
-    cursor: pointer;
-    font-size: 2rem;
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, .75);
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .calculator-grid button:hover {
-    background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .span-two {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .output {
-    grid-column: 1 / -1;
-    background-color: #b9faf880;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  background-color: #b9faf862;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid white;
 }
 .output .previous-operand {
-    color: rgba(0, 0, 0, 0.29);
-    font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.29);
+  font-size: 2rem;
 }
 
 .output .current-operand {
-    color: rgba(0, 0, 0);
-    font-size: 2.5rem;
+  color: rgba(0, 0, 0);
+  font-size: 3rem;
+}
+.span-two.equals {
+  background-color: #e89348dd;
+}
+.span-two.equals:hover {
+  background-color: #ed9549;
 }

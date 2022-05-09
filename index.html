@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="calculator-grid">
-        <div class="output">
-            <div class="previous-operand"></div>
-            <div class="current-operand"></div>
-        </div>
-        <button class="span-two">AC</button>
-        <button>DEL</button>
-        <button>÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
-        <button class="left">.</button>
-        <button>0</button>
-        <button class="span-two" id="right">=</button>
+      <div class="output">
+        <div class="previous-operand">0</div>
+        <div class="current-operand">0</div>
+      </div>
+      <div class="calculator-keys">
+        <button class="span-two all-clear">AC</button>
+        <button class="delete">DEL</button>
+        <button class="divide" data-type="operator">÷</button>
+        <button class="1" data-type="number">1</button>
+        <button class="2" data-type="number">2</button>
+        <button class="3" data-type="number">3</button>
+        <button class="mul" data-type="operator">×</button>
+        <button class="4" data-type="number">4</button>
+        <button class="5" data-type="number">5</button>
+        <button class="6" data-type="number">6</button>
+        <button class="add" data-type="operator">+</button>
+        <button class="7" data-type="number">7</button>
+        <button class="8" data-type="number">8</button>
+        <button class="9" data-type="number">9</button>
+        <button class="sub" data-type="operator">-</button>
+        <button class="dot left" data-type="number">.</button>
+        <button class="0" data-type="number">0</button>
+        <button class="span-two equals" data-type="number" id="right">=</button>
+      </div>
     </div>
-   <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-fd330f6f-3f41-421d-9fe5-de742d0c54c0chili_61@outlook.com
-
-e6da8-063bf-67202-4818f-dae26

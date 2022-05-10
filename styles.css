@@ -80,3 +80,7 @@ body {
 .span-two.equals:hover {
   background-color: #ed9549;
 }
+
+.calculator-grid [data-state="selected"] {
+  background-color: rgba(255, 255, 255, 0.9);
+}

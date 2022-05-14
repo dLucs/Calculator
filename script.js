@@ -8,18 +8,18 @@ const output = calculator.querySelector(".output");
 keys.addEventListener("click", (event) => {
   const key = event.target;
   const keyValue = key.textContent;
-  const displayValue = currentOperand.textContent;
+  let displayValue = currentOperand.textContent;
   const type = key.dataset.type;
   const previousKeyType = calculator.dataset.previousKeyType;
 
   // number key rule
   if (type === "number") {
     if (previousKeyType === "equals") {
+      displayValue = "0";
       currentOperand.textContent = keyValue;
       previousOperand.textContent = "0";
       delete calculator.dataset.firstNumber;
       delete calculator.dataset.operator;
-      calculator.querySelector('[data-state="selected"]').dataset.state = "";
     }
 
     if (displayValue === "0") {
